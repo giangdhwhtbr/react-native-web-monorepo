@@ -1,8 +1,8 @@
 import { AppRegistry } from 'react-native'
 
-import { App } from 'components/src/App'
+import { App } from '@myprj/components/src/App'
 
-AppRegistry.registerComponent('myprojectname', () => App)
-AppRegistry.runApplication('myprojectname', {
+AppRegistry.registerComponent('myprj', () => App)
+AppRegistry.runApplication('myprj', {
   rootTag: document.getElementById('root'),
 })

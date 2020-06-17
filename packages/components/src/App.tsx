@@ -28,7 +28,7 @@ export function App() {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Code sharing using Monorepo</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>packages/components/App.tsx</Text> to change this
+                Edit <Text style={styles.highlight}>packages/@myprj/components/App.tsx</Text> to change this
                 screen and then come back to see your edits (in the phone or the browser).
               </Text>
             </View>

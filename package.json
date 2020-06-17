@@ -1,18 +1,20 @@
 {
-  "name": "myprojectname",
+  "name": "myprj",
   "version": "0.0.1",
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "subdomains/*"
     ]
   },
   "scripts": {
-    "android": "yarn workspace mobile android",
+    "android": "yarn workspace @myprj/mobile android",
     "compile": "tsc -b --incremental",
-    "ios": "yarn workspace mobile  ios",
-    "studio": "yarn workspace mobile studio",
-    "xcode": "yarn workspace mobile xcode"
+    "ios": "yarn workspace @myprj/mobile ios",
+    "studio": "yarn workspace @myprj/mobile studio",
+    "xcode": "yarn workspace @myprj/mobile xcode",
+    "web": "yarn workspace @myprj/web start"
   },
   "dependencies": {
     "react-native": "*"
