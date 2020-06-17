@@ -1,0 +1,40 @@
+{
+    "name": "@myprj/desktop",
+    "version": "0.0.1",
+    "private": true,
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "yarn build:base && yarn build:web && yarn build:web:post && yarn build:electron",
+        "build:base": "yarn compile",
+        "build:electron": "electron-builder",
+        "build:web": "pushd \"../web\" && yarn build && popd",
+        "build:web:post": "shx cp -Rf ../web/dist dist/web",
+        "clean": "shx rm -f *.tsbuildinfo && shx rm -rf build && shx rm -rf dist",
+        "compile": "tsc -b --incremental",
+        "format": "prettier --write '{.,src/**}/*.{js,jsx,ts,tsx}'",
+        "lint": "tslint -p .",
+        "start": "nodemon --watch dist --exec \"electron .\""
+    },
+    "devDependencies": {
+        "@types/electron-devtools-installer": "^2.2.0",
+        "@types/jsonfile": "^6.0.0",
+        "@types/mkdirp": "^1.0.1",
+        "electron": "9.0.4",
+        "electron-builder": "^22.7.0",
+        "electron-devtools-installer": "^3.0.0",
+        "nodemon": "^2.0.4",
+        "shx": "^0.3.2",
+        "wait-on": "^5.0.1"
+    },
+    "build": {
+        "appId": "com.kiuglobal.myprj",
+        "productName": "myprj",
+        "files": [
+            "dist"
+        ]
+    },
+    "dependencies": {
+        "jsonfile": "^6.0.1",
+        "mkdirp": "^1.0.4"
+    }
+}

@@ -9,17 +9,18 @@
     ]
   },
   "scripts": {
-    "android": "yarn workspace @myprj/mobile android",
-    "compile": "tsc -b --incremental",
-    "ios": "yarn workspace @myprj/mobile ios",
     "studio": "yarn workspace @myprj/mobile studio",
     "xcode": "yarn workspace @myprj/mobile xcode",
-    "web": "yarn workspace @myprj/web start"
+    "compile": "tsc -b --incremental",
+    "dev:android": "yarn workspace @myprj/mobile android",
+    "dev:ios": "yarn workspace @myprj/mobile ios",
+    "dev:web": "yarn workspace @myprj/web start",
+    "dev:desktop": "concurrently \"yarn dev:web\" \"yarn workspace @myprj/desktop compile -w\" \"wait-on http://localhost:3000 && yarn workspace @myprj/desktop start\""
   },
   "dependencies": {
     "react-native": "*"
   },
   "devDependencies": {
-    "typescript": "3.9.5"
+    "typescript": "3.7.5"
   }
 }
