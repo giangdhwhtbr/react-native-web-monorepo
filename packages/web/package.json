@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@myprj/components": "0.0.1",
     "react": "16.13.1",
     "react-art": "16.13.1",
     "react-dom": "16.13.1",
@@ -12,6 +13,7 @@
   "scripts": {
     "compile": "tsc -b",
     "prestart": "npm run compile",
+    "clean": "shx rm -f *.tsbuildinfo && shx rm -rf dist",
     "start": "concurrently \"npm run compile -- -w --incremental\" \"npm run _start\"",
     "_start": "react-app-rewired start",
     "prebuild": "npm run compile",

@@ -11,7 +11,8 @@
     "start": "concurrently \"npm run compile -- -w\" \"react-native start\"",
     "studio": "studio android",
     "test": "jest",
-    "xcode": "open ios/myprj.xcworkspace"
+    "xcode": "open ios/myprj.xcworkspace",
+    "clean": "shx rm -f *.tsbuildinfo && shx rm -rf dist"
   },
   "dependencies": {
     "@myprj/components": "0.0.1",

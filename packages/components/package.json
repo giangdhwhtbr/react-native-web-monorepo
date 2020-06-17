@@ -2,6 +2,9 @@
   "name": "@myprj/components",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "clean": "shx rm -f *.tsbuildinfo && shx rm -rf dist"
+  },
   "dependencies": {
     "react": "16.13.1",
     "react-native": "0.62.2"

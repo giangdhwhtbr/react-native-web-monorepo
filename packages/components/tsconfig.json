@@ -3,13 +3,15 @@
   "compilerOptions": {
     "composite": true,
     "declaration": true,
-    // "emitDeclarationOnly": true,
     "isolatedModules": false,
+    "jsx": "preserve",
+    "noEmit": false,
     "outDir": "dist",
     "rootDir": "src",
     "typeRoots": [
-      "@types",
+      "../../@types",
       "../../node_modules/@types"
     ]
-  }
+  },
+  "include": ["src/"],
 }

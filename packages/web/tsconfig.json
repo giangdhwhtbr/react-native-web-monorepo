@@ -2,15 +2,18 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
     "noEmit": true,
+    "outDir": "dist",
+    "rootDir": "src",
     "typeRoots": [
-      "@types",
+      "../../@types",
       "../../node_modules/@types"
     ],
     "module": "esnext"
   },
   "include": [
-    "src"
+    "src/index.tsx"
   ],
   "references": [
     {
